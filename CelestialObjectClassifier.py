@@ -49,7 +49,7 @@ class CombinePipelines(BaseEstimator, TransformerMixin):
         X_preprocessed = self.preprocessing_pipeline.transform(X)
         return self.final_pipeline.predict_proba(X_preprocessed)
 
-celestial_object_classifier = joblib.load('C:/Users/Rana Farooq/Documents/Semester 7/DS/celestial_object_classifier.pkl')
+celestial_object_classifier = joblib.load('./celestial_object_classifier.pkl')
 
 def predict_celestial_object(features):
     return celestial_object_classifier.predict(features)
